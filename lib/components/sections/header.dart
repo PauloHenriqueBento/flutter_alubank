@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
@@ -6,6 +7,18 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: <Color>[
+              Color.fromRGBO(103, 99, 234, 1),
+              Color.fromRGBO(155, 105, 254, 1),
+              Color.fromRGBO(195, 107, 255, 1),
+            ]
+        ),
+        borderRadius: BorderRadius.vertical(bottom: Radius.circular(15)),
+      ),
       child: Padding(
         padding: const EdgeInsets.fromLTRB(16, 80, 16, 16),
         child: Row(
@@ -30,7 +43,7 @@ class Header extends StatelessWidget {
                 Text(
                   'Balanço disponível',
                   style: TextStyle(fontSize: 16),
-                )
+                ),
               ],
             ),
             const Icon(
